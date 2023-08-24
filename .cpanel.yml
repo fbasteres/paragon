@@ -9,4 +9,5 @@ deployment:
     - /bin/cp -R public $DEPLOYPATH
     - /bin/cp -R resources $DEPLOYPATH
     - /bin/cp -R routes $DEPLOYPATH
+    - /bin/cp -R vendor $DEPLOYPATH
     - /bin/cp -R storage $DEPLOYPATH
