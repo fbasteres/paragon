@@ -5,7 +5,7 @@
         <i class="sidebar-toggle fa-solid fa-arrow-left ms-auto fs-5 d-none d-md-block"></i>
     </div>
             <ul class="sidebar-menu m-0 mb-0">
-                <li class="sidebar-menu-item">
+                <li class="sidebar-menu-item {{ 'home' == request()->path() ? 'active' : '' }}">
                     <a href="{{ route ('inicio') }}">
                     <i class="fa-brands fa-slack sidebar-menu-item-icon"></i>
                         Dashboard
@@ -19,7 +19,7 @@
                             Consultas rapidas &nbsp;<span class="badge sp-rechazado">Nuevo</span></a>
                         </a>
                     </li>
-                    <li class="sidebar-menu-item pt-1 has-dropdown">
+                    <li class="sidebar-menu-item pt-1 has-dropdown ">
                         <a type="button" href="#">
                         <i class="fa-solid fa-gear sidebar-menu-item-icon"></i>
                             Configuración
@@ -27,10 +27,13 @@
                         </a>
                         <ul class="sidebar-dropdown-menu">
                             <li class="sidebar-dropdown-menu-item">
-                                <a href="{{ route ('users.list') }}">Perfil de usuarios</a>
+                                <a href="{{ route ('admin.permissions.index') }}">Permisos</a>
                             </li>
                             <li class="sidebar-dropdown-menu-item">
-                                <a href="hola">Registrar Usuario</a>
+                                <a href="{{ route ('admin.roles.index') }}">Roles</a>
+                            </li>
+                            <li class="sidebar-dropdown-menu-item">
+                                <a href="{{ route ('admin.users.index') }}">Usuarios</a>
                             </li>
                             <li class="sidebar-dropdown-menu-item">
                                 <a href="#">Dependencias</a>

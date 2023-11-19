@@ -3,6 +3,8 @@
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\Permission\PermissionController;
+use App\Http\Controllers\Roles\RoleController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoutController;
 use Illuminate\Support\Facades\Route;
@@ -22,11 +24,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/register', function () {
-    return view('auth.register');
-});
 
-
+Route::get('/register',[RegisterController::class,'show']);
 Route::post('/register',[RegisterController::class,'register']);
 
 
@@ -38,7 +37,9 @@ Route::get('/home',[HomeController::class,'index']) -> name ('inicio');
 Route::get('/logout',[LogoutController::class,'logout'])-> name ('auth.logout');
 
 /*Contenido */
-Route::get('/users',[UserController::class,'index']) -> name ('users.list');
+Route::resource('permissions', PermissionController::class) -> names ('admin.permissions');
+Route::resource('roles', RoleController::class) -> names ('admin.roles');
+Route::resource('users', UserController::class) -> names ('admin.users');
 
 
 

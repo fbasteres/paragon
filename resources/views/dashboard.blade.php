@@ -1,7 +1,7 @@
 @include('layouts.style')
 @extends('layouts.app-master')
 @section('content')
-    <title>Dashboard</title>
+    <title>Paragon+ | Dashboard</title>
     <div class="p-3 container-xxl">
         <h5>Hoy, {{date('d')}} {{date('M')}} de {{date('Y')}}</h5>
         <div class="card">

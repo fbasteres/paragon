@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap');
 :root {
+    --primary-color:#0056ac;
     --nuevo:#331980;
     --nuevo-bg:#c2b1f5;
     --atendido:#126b49;
@@ -12,6 +13,9 @@
     --finalizado-bg:#ffd7d5;
     --paragon-violeta:rgb(91, 54, 242);
     --paragon-violeta-os:rgb(110, 76, 249); 
+    --btn-closed-main:#fc4a61;
+    --btn-closed-hover:#fed4d6;
+    --btn-clossed-focus:  #fdadb3;
 }
 
 /*Goblal*/
@@ -73,6 +77,7 @@ body {
 .form-control:focus{
     border-color: var(--bs-indigo);
     box-shadow: none;
+    
     
 }
 .btn-indigo {
@@ -180,9 +185,83 @@ body {
     border-color: var(--paragon-violeta);
 }
 
+.btn-acciones {
+    text-decoration: none;
+    border-radius: 3rem;
+    color: var(--primary-color);
+}
 
+.btn-acciones:hover {
+    text-decoration: none;
+    border-radius: 3rem;
+    color: var(--primary-color);
+    background-color: var(--bs-gray-200);
+}
+
+.btn-acciones:focus {
+    text-decoration: none;
+    border-radius: 3rem;
+    color: var(--primary-color);
+    background-color: var(--bs-gray-200);
+}
+
+.btn-closed {
+    align-items: center;
+    border: 0;
+    background-color: transparent;
+    padding: .3rem .8rem;
+    border-radius: 0.3rem;
+}
+.href-closed {
+    text-decoration: none;
+}
+.btn-closed:hover {
+    background-color: var(--btn-closed-hover);
+}
+
+.btn-closed:focus {
+    background-color: var(--btn-clossed-focus);
+}
+
+
+.btn-closed >i {
+    text-decoration: none;
+    color: var(--btn-closed-main);
+}
+.btn-closed>h6{
+    text-decoration: none;
+    padding-top: .5rem;
+    color: var(--bs-gray-900);
+}
 
 /* fin botones universales*/
+
+
+/*Inicio card-universales*/
+.car-inf {
+    border-radius: 0.7rem;
+    box-shadow: rgba(176, 192, 202, 0.2) 0 0.2rem 1rem -.2rem;
+    background-color: var(--bs-white);
+    padding: 2rem;
+    height: 100%;
+}
+
+.car-form>label {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.car-form>label>p {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+
+.car-form>input {
+    border: solid 0.07rem var(--bs-gray-400);
+}
+/*Fin card-universales*/
+
  /*alerta */
 
  .hide {

@@ -20,7 +20,7 @@
                     @include ('layouts.partials.messages')
                     <label for="" class="form-label">Ingresa tus datos para <b>iniciar sesión.</b></label>
                     <div class="mb-4">
-                        <input type="text" class="form-control" name="username" placeholder="Usuario">
+                        <input type="email" class="form-control" name="email" placeholder="Email">
                     </div>
                     <div class="mb-2">
                         <input type="password" class="form-control" name="password" placeholder="Contraseña">

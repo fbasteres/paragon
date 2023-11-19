@@ -19,6 +19,7 @@ class Area extends Model
 
     //relacion uno a muchos
     public function Usuario(): HasMany
+    
     {
         return $this->hasMany(User::class, 'area_id', 'id');
     }

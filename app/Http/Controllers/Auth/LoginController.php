@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\auth;
+namespace App\Http\Controllers\Auth;
+
+use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use Illuminate\http\Request;
-use App\Http\Controllers\controller;
 use illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+
     public function show(){
         if(Auth::check()){
             return redirect('/home');

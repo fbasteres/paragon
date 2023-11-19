@@ -9,18 +9,23 @@ use illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
-    public function index(){
+    public function show(){
         if(Auth::check()){
             $users = User::all();
             return redirect('/home');
         }
-        return view('auth.login');
+        return view('auth.register');
     }
     
     public function register(RegisterRequest $request)
     {
             $users = User::create($request->validated());
+            return redirect('/login')->with('success', 'Cuenta creada correctamente');
     }
+
+    
+
+
 }
 
 ?>
